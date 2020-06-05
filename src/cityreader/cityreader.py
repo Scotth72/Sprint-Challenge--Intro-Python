@@ -34,13 +34,14 @@ def cityreader(cities=[]):
     # `cities` list
     with open("src/cityreader/cities.csv", newline='') as csv_file:
         csv_reader = csv.reader(csv_file)
-        line_count = 0
+        next(csv_reader)
+        # line_count = 0
         for row in csv_reader:
-            if line_count == 0:
-                line_count += 1
-            else:
-                cities.append(
-                    City(str(row[0]), float(row[3]), float(row[4])))
+            # if line_count == 0:
+            #     line_count += 1
+            # else:
+            cities.append(
+                City(str(row[0]), float(row[3]), float(row[4])))
 
             return cities
 
