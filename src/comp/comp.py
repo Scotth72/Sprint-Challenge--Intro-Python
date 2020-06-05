@@ -93,5 +93,5 @@ for x in g:
 print("Square root of ages:")
 h = []
 for i in humans:
-    h.append(i.age ** 2)
+    h.append(math.sqrt(i.age))
 print(h)
